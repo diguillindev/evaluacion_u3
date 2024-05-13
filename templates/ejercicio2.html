@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <form method="POST">
+        <label for="nombre1">Nombre 1:</label>
+        <input type="text" name="nombre1"><br><br>
+        <label for="nombre2">Nombre 2:</label>
+        <input type="text" name="nombre2"><br><br>
+        <label for="nombre3">Nombre 3:</label>
+        <input type="text" name="nombre3"><br><br>
+        <input type="submit" value="Enviar">
+
+        {% if nombre_mas_largo is defined %}
+        <h2>Resultado</h2><br>
+        <p>El nombre con mayor cantidad de caracteres es: {{ nombre_mas_largo }}</p><br>
+        <p>Tiene {{ caracteres_mas_largos }} caracteres</p>
+    {% endif %}
+    </form>
+</body>
+</html>
